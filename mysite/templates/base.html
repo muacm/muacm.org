@@ -1,0 +1,118 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="shortcut icon" href="{% static 'favicon.png' %}"/>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+
+    
+    
+
+
+    {% block head %}
+    {% endblock head %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+    {% block style %}
+    {% endblock style %}
+
+    {% block script %}
+    {% endblock script %}
+
+    {% block title %}
+        <title> Base title </title>
+    {% endblock title %}
+</head>
+
+<body>
+<!--  Nav Bar -->
+<nav class="navbar navbar-expand-lg navbar-light">
+    
+    <a href="{% url 'acmapp:home-page' %}">
+        <img src="{% static 'logo.svg' %}" alt="logo"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'acmapp:event-page' %}">Events</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'acmapp:project-page' %}">Projects</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'acmapp:team-page' %}">Team</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'acmapp:contact-page' %}">Contact Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'acmapp:blog-page' %}">Blogs</a>
+            </li>
+        </ul>
+
+        <ul class="navbar-nav">
+            {% if request.user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'account:logout' %}">Logout</a>
+                </li>
+            {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'account:login' %}">Login</a>
+                </li>
+            {% endif %}
+        </ul>
+
+    </div>
+</nav>
+
+    {% block body %}
+        <div class="container-fluid">
+            <div class="container">
+                <h1> Default body below navbar </h1>
+            </div>
+        </div>
+    {% endblock body %}
+
+    <!--  Chatbot df -->
+    <df-messenger
+    intent="WELCOME"
+    chat-title="muacm"
+    agent-id="4907c2af-4153-42db-832a-d6f3fd52dd40"
+    language-code="en"
+    ></df-messenger>
+
+<!-- Footer -->
+<footer class="footer text-center text-lg-start">
+    <!-- Grid container -->
+    <div class="container">
+        <div class="container p-4">
+            <p>Footer</p>
+        </div>
+        <!-- Grid container -->
+    </div>
+</footer>
+<!-- Footer -->
+
+        
+    <!--  jQuery and Bootstrap Bundle (includes Popper) -->
+    <script  src="{% static 'jquery-3.5.1.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}" ></script>
+
+    <!--  Chatbot script -->
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+
+        
+
+</body>
+
+</html>
