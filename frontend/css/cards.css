@@ -1,0 +1,49 @@
+body {
+  margin: auto;
+  max-width: 1400px;
+}
+
+.event_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.event_card {
+  width: 250px;
+  -webkit-box-shadow: 12px 20px 120px #dfdfdf;
+          box-shadow: 12px 20px 120px #dfdfdf;
+  padding: 2em;
+  background-color: white;
+  margin-right: 1em;
+  margin-left: 1em;
+}
+
+.event_image {
+  width: 100%;
+  outline: black solid;
+}
+
+.event_name {
+  color: black;
+  font-family: "Poppins", monospace;
+}
+
+.event_desc {
+  font-family: "Poppins", monospace;
+  font-size: small;
+}
+
+.button {
+  color: blue;
+  font-weight: 600;
+  width: 100%;
+  font-family: "Poppins", monospace;
+}
+
+.button:hover {
+  text-decoration: none;
+}
+/*# sourceMappingURL=cards.css.map */
