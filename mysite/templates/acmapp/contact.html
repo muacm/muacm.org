@@ -7,8 +7,87 @@
 {% endblock title %}
 
 {% block body %}
+    <div id="element-with-background-image">
+        <div id="color-overlay">
+            <h1 class="text-center" style="color: white; padding-top: 100px;">Contact Us</h1>
+        </div>
+        <img src="img/contact_banner.webp" width="100%" height="240px;">
+     </div>
+    <br><br>
     <div class="container">
-        <h2> Contact Page </h2>
+        <div class="row">
+            <div class="col-md-4">
+            <div class="wrimagecard wrimagecard-topimage">
+                <div class="wrimagecard-topimage_header" style="background-color: rgba(130, 93, 9, 0.1)">
+                    <center><i class="fa fa-envelope" style="color:#825d09"></i></center>
+                </div>
+                <br>
+                <center><h3>acm@medicaps.ac.in</h3></center>
+                <br>
+            </div>
+            </div>
+            <div class="col-md-4">
+                <div class="wrimagecard wrimagecard-topimage">
+                    <div class="wrimagecard-topimage_header" style="background-color: rgba(22, 160, 133, 0.1)">
+                        <center><i class = "fa fa-phone" style="color:#16A085"></i></center>
+                    </div>
+                    <br>
+                    <center><h3>91+ 86592-56892</h3></center>
+                    <br>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="wrimagecard wrimagecard-topimage">
+                    <div class="wrimagecard-topimage_header" style="background-color:  rgba(51, 105, 232, 0.1)">
+                        <center><i class="fa fa-map-marked" style="color:#3369e8"> </i></center>
+                    </div>
+                    <br>
+                    <center><h3>Medi-Caps University</h3></center>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid wrimagecard">
+        <div class="row">
+            <div class="col-lg-7">
+                <div class="wrap-contact100">
+                    <form class="contact100-form validate-form">
+                        <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Name is required">
+                            <span class="label-input100">Tell us your name *</span>
+                            <input class="input100" type="text" name="name" placeholder="Enter your name">
+                        </div>
+        
+                        <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                            <span class="label-input100">Enter your email *</span>
+                            <input class="input100" type="text" name="email" placeholder="Enter your email">
+                        </div>
+        
+                        <div class="wrap-input100">
+                            <span class="label-input100">Subject</span>
+                            <input class="input100" type="text" name="web" placeholder="This Message is For...">
+                        </div>
+        
+                        <div class="wrap-input100 validate-input" data-validate = "Message is required">
+                            <span class="label-input100">Message</span>
+                            <textarea class="input100" name="message" placeholder="Your message here..."></textarea>
+                        </div>
+        
+                        <div class="container-contact100-form-btn">
+                            <div class="wrap-contact100-form-btn">
+                                <div class="contact100-form-bgbtn"></div>
+                                <button class="contact100-form-btn">
+                                    Submit
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.8782185370846!2d75.8014020148084!3d22.621022385157897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962f958dcb7169d%3A0xd877c12078e50f0f!2sMedi-Caps%20University!5e0!3m2!1sen!2sin!4v1616399882435!5m2!1sen!2sin" width="85%" height="62%" style="border:5px; border-radius: 15px;" class="mapmedi" allowfullscreen="" loading="lazy"></iframe> 
+            </div>
+        </div>
     </div>
 {% endblock body %}
 

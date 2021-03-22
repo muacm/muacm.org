@@ -1,21 +1,23 @@
 {% extends 'base.html' %}
 {% load static %}
 
-
 {% block title %}
     <title> Event Page </title>
 {% endblock title %}
 
 {% block body %}
-    <div class="container">
-        <h2> Event Page </h2>
+    <h1 style="color: black; font-family: Poppins, monospace; text-align: center;">Events</h1>
+    <div class="event_container">
+    {% for event in events %}
+        <div class="event_card">
+            <img src="{{ event.image.url }}" alt="event-name" class="event_image">
+            <h3 class="event_name">{{ event.title }}</h3>
+            <p class="event_desc">{{ event.description }}</p>
+            <a href="#" class="button">See Events</a>
+        </div>
+
     </div>
 {% endblock body %}
 
-
-
 {% block script %}
 {% endblock script %}
-
-
-
