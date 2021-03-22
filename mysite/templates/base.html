@@ -2,6 +2,7 @@
 {% load static %}
 <html lang="en">
 <head>
+
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,8 +25,8 @@
   {% endblock style %}
 
 
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/swiper-bundle.css" />
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   
   <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -44,25 +45,9 @@
 
 </head>
 <body>
-{% comment %} 
-  <script src="js/particle.js"></script>
-  <script src="js/main.js"></script>
-  <div class="container">
-    <canvas id="canvas"></canvas>
-  </div>
 
-  <div class="container">
-    <canvas>your browser is not support canvas,please upgrade your browser</canvas>
-    <div class="input">
-      <input type="text" id="updateText" placeholder="type your word">
-      <button id="updateButton">submit</button>
-    </div>
-    <div class="fork-me" style="position: absolute;right: 0px;top: 0px;z-index: 1001;">
-      <a href="https://github.com/chen844033231/particleText"><img src="images/forkme.png" width="149" height="149" alt="github" /></a>
-    </div>
-  </div>
-  <script src="js/particle.js"></script>
-  <script src="js/main.js"></script> {% endcomment %}
+ 
+ 
 
 <!--  Nav Bar -->
 {% comment %} <div class="upper"> {% endcomment %}
@@ -92,13 +77,15 @@
         </div>
       {% endblock body %}
 
-    <!--  Chatbot df start-->
-    <df-messenger
-    intent="WELCOME"
-    chat-title="muacm"
-    agent-id="4907c2af-4153-42db-832a-d6f3fd52dd40"
-    language-code="en"
-    ></df-messenger>
+    <!--  Chatbot df start-->    
+<df-messenger
+  intent="WELCOME"
+  chat-title="muacm"
+  agent-id="4907c2af-4153-42db-832a-d6f3fd52dd40"
+  language-code="en"
+></df-messenger>
+
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1%22%3E"</script>
     <!--  Chatbot end-->
 
     
