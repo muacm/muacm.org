@@ -15,7 +15,26 @@
   <title>MUACM</title>
 </head>
 <body>
-  <div class="upper">
+<!--  <script src="js/particle.js"></script>
+  <script src="js/main.js"></script>
+  <div class="container">
+    <canvas id="canvas"></canvas>
+  </div>-->
+
+  <div class="container">
+    <canvas>your browser is not support canvas,please upgrade your browser</canvas>
+    <div class="input">
+      <input type="text" id="updateText" placeholder="type your word">
+      <button id="updateButton">submit</button>
+    </div>
+    <div class="fork-me" style="position: absolute;right: 0px;top: 0px;z-index: 1001;">
+      <a href="https://github.com/chen844033231/particleText"><img src="images/forkme.png" width="149" height="149" alt="github" /></a>
+    </div>
+  </div>
+  <script src="js/particle.js"></script>
+  <script src="js/main.js"></script>
+
+<div class="upper">
         <div class="navbar">
           <section class="name"><img src="MuACMlogo.png" alt="" class="logo"></section>
           <section class="menu">
@@ -28,7 +47,7 @@
         </div>
      <div class="slider">
           <!-- Swiper -->
-    <div class="swiper-container">
+   <div class="swiper-container">
         <div class="swiper-wrapper">
           <div class="swiper-slide">Slide 1</div>
           <div class="swiper-slide">Slide 2</div>
@@ -37,12 +56,12 @@
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
       </div>
-    
+
      </div>
     </div>
-    
+
       <!-- Initialize Swiper -->
-      <script>
+     <script>
         var swiper = new Swiper('.swiper-container', {
           navigation: {
             nextEl: '.swiper-button-next',
@@ -58,7 +77,7 @@
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum molestiae saepe accusantium id fugit tempore commodi delectus voluptates dolorem a illo laborum dolorum sapiente exercitationem minima eligendi, ab cumque et?
         </p>
       </div>
-      
+
       <div class="team">
         <h1 style="color: black; font-family: Poppins, monospace; text-align: center;">Team Members</h1>
         <div class="team_container">
@@ -160,7 +179,7 @@
                 <li>Events</li>
               </a>
               <!--option to download source code-->
-            </ul>
+        </ul>
           </div>
           <div class="box3">
             <h3>Information</h3>
@@ -198,5 +217,7 @@
 
   <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
 </body>
 </html>
