@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.navbar {
+    display: flex;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 5rem;
+    font-size: larger;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    width: 100%;
+  }
+
+  .menu {
+    position: relative;
+    right: 10rem;
+    padding-top: 20px;
+
+  }
+  
+  .menu1,
+  .menu2,
+  .menu3 {
+    padding: 15px;
+    color: black;
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .logo {
+    width: 14%;
+  }
+
+  .slider {
+      margin-top: 10rem;
+      height: 30rem;
+  }
+
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    color: black;
+    font-family: "Poppins", sans-serif;
+    font-size: 50px;
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-button-next {
+      color: black;
+      margin-top: 4rem;
+  }
+
+.about_us {
+  text-align: center;
+  margin-top: 8em;
+}
+
+.headline {
+  text-align: center;
+  color: black;
+  font-family: "Poppins", sans-serif;
+}
+
+.about_us_description {
+  text-align: center;
+  color: black;
+  font-family: "Poppins", sans-serif;
+  margin: auto;
+  max-width: 1400px;
+}
+
+.team {
+  margin-top: 12em;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1400px;
+}
+
+.events {
+  margin-top: 8em;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1400px;
+}
+
+.event_container {
+  display: flex;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.event_card {
+  width: 250px;
+  box-shadow: 12px 20px 120px rgb(223, 223, 223);
+  padding: 2em;
+  background-color: white;
+  margin-right: 1em;
+  margin-left: 1em;
+}
+
+.event_image {
+  width: 100%;
+  outline: black solid;
+}
+
+.event_name {
+  color: black;
+  font-family: "Poppins", monospace;
+}
+
+.event_desc {
+  font-family: "Poppins", monospace;
+  font-size: small;
+}
+
+.button {
+  color: blue;
+  font-weight: 600;
+  width: 100%;
+  font-family: "Poppins", monospace;
+}
+
+.button:hover {
+  text-decoration: none;
+}
