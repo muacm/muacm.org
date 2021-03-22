@@ -8,10 +8,10 @@
 
 {% block body %}
     
-    
-     <div class="slider">
-          <!-- Swiper -->
-   <div class="swiper-container">
+    {% comment %} upper div ? {% endcomment %}
+    <div class="slider">
+        <!-- Swiper -->
+      <div class="swiper-container">
         <div class="swiper-wrapper">
           <div class="swiper-slide">Slide 1</div>
           <div class="swiper-slide">Slide 2</div>
@@ -21,20 +21,12 @@
         <div class="swiper-button-prev"></div>
       </div>
 
-     </div>
     </div>
 
-      <!-- Initialize Swiper -->
-     <script>
-        var swiper = new Swiper('.swiper-container', {
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
-        });
-      </script>
+    {% comment %} div of upper ?</div> {% endcomment %}
 
-      <div class="about_us">
+    
+      <div class="about_us" id="aboutusID">
         <h1 class="headline">About ACM Medicaps Chapter</h1>
         <p class="about_us_description">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati veniam fugit nemo non veritatis dolor ipsa facilis, nihil consequuntur aperiam ullam recusandae doloribus perspiciatis, quo aliquid saepe a vel illo.
@@ -42,9 +34,10 @@
         </p>
       </div>
 
-      <div class="team">
+      <div class="team" id="teamID">
         <h1 style="color: black; font-family: Poppins, monospace; text-align: center;">Team Members</h1>
         <div class="team_container">
+          
           <div class="profile_card">
             <img src="demo_character.jpg" alt="profile-photo" class="profile_image">
             <h3 class="profile_name">John Doe</h3>
@@ -56,81 +49,46 @@
               <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
             </div>
           </div>
-          <div class="profile_card">
-            <img src="demo_character.jpg" alt="profile-photo" class="profile_image">
-            <h3 class="profile_name">John Doe</h3>
-            <p class="profile_desc">Position Name</p>
-            <div class="profile_icons">
-              <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-              <a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a>
-              <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-              <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-            </div>
-          </div>
-          <div class="profile_card">
-            <img src="demo_character.jpg" alt="profile-photo" class="profile_image">
-            <h3 class="profile_name">John Doe</h3>
-            <p class="profile_desc">Position Name</p>
-            <div class="profile_icons">
-              <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-              <a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a>
-              <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-              <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-            </div>
-          </div>
-          <div class="profile_card">
-            <img src="demo_character.jpg" alt="profile-photo" class="profile_image">
-            <h3 class="profile_name">John Doe</h3>
-            <p class="profile_desc">Position Name</p>
-            <div class="profile_icons">
-              <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-              <a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a>
-              <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-              <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-            </div>
-          </div>
-      </div>
+
+        </div>
+        <a href="{% url 'acmapp:team-page' %}">More</a>
       </div>
 
-      <div class="events">
+      <div class="events" id="eventID">
         <h1 style="color: black; font-family: Poppins, monospace; text-align: center;">Events</h1>
         <div class="event_container">
+
           <div class="event_card">
             <img src="demo_character.jpg" alt="event-name" class="event_image">
             <h3 class="event_name">Name of the Event</h3>
             <p class="event_desc">Lorem ipsum dolor sit amet consectetur.</p>
             <a href="#" class="button">See Events</a>
           </div>
-          <div class="event_card">
-            <img src="demo_character.jpg" alt="event-name" class="event_image">
-            <h3 class="event_name">Name of the Event</h3>
-            <p class="event_desc">Lorem ipsum dolor sit amet consectetur.</p>
-            <a href="#" class="button">See Events</a>
-          </div>
-          <div class="event_card">
-            <img src="demo_character.jpg" alt="event-name" class="event_image">
-            <h3 class="event_name">Name of the Event</h3>
-            <p class="event_desc">Lorem ipsum dolor sit amet consectetur.</p>
-            <a href="#" class="button">See Events</a>
-          </div>
-          <div class="event_card">
-            <img src="demo_character.jpg" alt="event-name" class="event_image">
-            <h3 class="event_name">Name of the Event</h3>
-            <p class="event_desc">Lorem ipsum dolor sit amet consectetur.</p>
-            <a href="#" class="button">See Events</a>
-          </div>
+
         </div>
+        <a href="{% url 'acmapp:event-page' %}">More</a>
       </div>
 
-  
-
+    {% comment %} TODO here contact page {% endcomment %}
+      <div id="contactID">
+        Contact Page
+      </div>
 
 {% endblock body %}
 
 
 
-{% block script %}
-{% endblock script %}
+{% block bodyScript %}
+      <!-- Initialize Swiper -->
+      <script>
+            var swiper = new Swiper('.swiper-container', {
+              navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              },
+            });
+      </script>
+{% endblock bodyScript %}
 
 
 

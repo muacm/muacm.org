@@ -10,17 +10,24 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 
 
-  <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}" media="screen" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
   <link rel="stylesheet" type="text/css" href="{% static 'css/footer.css' %}">
   
+  <link rel="stylesheet" type="text/css" href="{% static 'css/teams.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/blogs.css' %}">
+
   {% block style %}
   {% endblock style %}
 
 
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
+  
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  
   <!-- <link rel="shortcut icon" href="{% static 'favicon.png' %}"/> -->
+  
   {% block head %}
   {% endblock head %}
 
@@ -28,19 +35,19 @@
       <title>MUACM</title>
   {% endblock title %}
   
-  {% block script %}
-  {% endblock script %}
+  {% block headScript %}
+  {% endblock headScript %}
 
 </head>
 <body>
-
-<!--  <script src="js/particle.js"></script>
+{% comment %} 
+  <script src="js/particle.js"></script>
   <script src="js/main.js"></script>
   <div class="container">
     <canvas id="canvas"></canvas>
-  </div>-->
+  </div>
 
-  <!-- <div class="container">
+  <div class="container">
     <canvas>your browser is not support canvas,please upgrade your browser</canvas>
     <div class="input">
       <input type="text" id="updateText" placeholder="type your word">
@@ -51,10 +58,10 @@
     </div>
   </div>
   <script src="js/particle.js"></script>
-  <script src="js/main.js"></script> -->
+  <script src="js/main.js"></script> {% endcomment %}
 
 <!--  Nav Bar -->
-<div class="upper">
+{% comment %} <div class="upper"> {% endcomment %}
         <div class="navbar">
           <section class="name">
             <a href="{% url 'acmapp:home-page' %}">
@@ -65,12 +72,13 @@
             <a href="{% url 'acmapp:home-page' %}" class="menu1"><b>HOME</b></a>
             <a href="{% url 'acmapp:home-page' %}" class="menu2">ABOUT ACM</a>
             <a href="{% url 'acmapp:blog-page' %}" class="menu3">BLOGS</a>
-            <a href="{% url 'acmapp:team-page' %}" class="menu3">TEAM</a>
+            <a href="#teamID" class="menu3">TEAM</a>
             <a href="{% url 'acmapp:project-page' %}" class="menu2">PAGES</a>
-            <a href="{% url 'acmapp:contact-page' %}" class="menu3">CONTACT</a>
+            <a href="#eventID" class="menu3">EVENTS</a>
+            <a href="#contactID" class="menu3">CONTACT</a>
           </section>
         </div>
-
+        <!-- Nav bar end-->
   
       {% block body %}
         <div class="container-fluid">
@@ -78,66 +86,66 @@
                 <h1> Default body below navbar </h1>
             </div>
         </div>
-  {% endblock body %}
-  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+      {% endblock body %}
 
-    <!--  Chatbot df -->
+    <!--  Chatbot df start-->
     <df-messenger
     intent="WELCOME"
     chat-title="muacm"
     agent-id="4907c2af-4153-42db-832a-d6f3fd52dd40"
     language-code="en"
     ></df-messenger>
+    <!--  Chatbot end-->
 
     
-  <!-- footer -->
+  <!-- footer start-->
   <div id="footer">
     <div class="f_container">
-      <div class="box1">
-        <img src="MuACMlogo.png" alt="MUACM Demo Logo" />
-      </div>
-      <div class="box2">
-        <h3>Categories</h3>
-        <ul>
-          <a href="#">
-            <li>Home</li>
-          </a>
-          <a href="#">
-            <li>Blogs</li>
-          </a>
-          <a href="#">
-            <li>Teams</li>
-          </a>
-          <a href="">
-            <li>Events</li>
-          </a>
-          <!--option to download source code-->
-        </ul>
-      </div>
-      <div class="box3">
-        <h3>Information</h3>
-        <ul>
-          <a href="">
-            <li>About Us</li>
-          </a>
-          <a href="">
-            <li>Terms &amp; Conditions</li>
-          </a>
-          <a href="">
-            <li>Privacy Policy</li>
-          </a>
-        </ul>
-      </div>
-      <div class="box4">
-        <h3>Contact Us</h3>
-        <ul>
-          <li><i class="fas fa-envelope"></i>emailaddress@email.com</li>
-          <li><i class="fas fa-phone"></i> +91 1234567890</li>
-          <li><i class="fas fa-map-marker-alt"></i>Indore, India</li>
-        </ul>
-      </div>
+        <div class="box1">
+          <img src="{% static 'MuACMlogo.png' %}" alt="MUACM Demo Logo" />
+        </div>
+        <div class="box2">
+          <h3>Categories</h3>
+          <ul>
+              <a href="#">
+                <li>Home</li>
+              </a>
+              <a href="#">
+                <li>Blogs</li>
+              </a>
+              <a href="#">
+                <li>Teams</li>
+              </a>
+              <a href="">
+                <li>Events</li>
+              </a>
+                    <!--option to download source code-->
+          </ul>
+        </div>
+        <div class="box3">
+          <h3>Information</h3>
+          <ul>
+            <a href="">
+              <li>About Us</li>
+            </a>
+            <a href="">
+              <li>Terms &amp; Conditions</li>
+            </a>
+            <a href="">
+              <li>Privacy Policy</li>
+            </a>
+          </ul>
+        </div>
+        <div class="box4">
+          <h3>Contact Us</h3>
+          <ul>
+            <li><i class="fas fa-envelope"></i>emailaddress@email.com</li>
+            <li><i class="fas fa-phone"></i> +91 1234567890</li>
+            <li><i class="fas fa-map-marker-alt"></i>Indore, India</li>
+          </ul>
+        </div>
     </div>
+
     <div class="bar">
       <p>Copyright &copy; 2021 <a>MUACM</a> All rights Reserved</p>
       <div class="iconContainer">
@@ -147,9 +155,12 @@
         <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
       </div>
     </div>
+
   </div>
+  <!-- footer end-->
 
-
+{% block bodyScript %}
+{% endblock bodyScript %}
 
 </body>
 </html>
