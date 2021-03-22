@@ -2,6 +2,7 @@ from django.shortcuts import render
 
 # below for class based views
 from django.views.generic import TemplateView
+from acmapp.models import Event, Project, TeamMember, Blog
 
 
 class HomePageView(TemplateView):
@@ -11,6 +12,7 @@ class HomePageView(TemplateView):
 
         # Contexts Dictionary
         context = {
+
         }
 
         return super(HomePageView, self).render_to_response(context)
@@ -23,6 +25,7 @@ class ProjectPageView(TemplateView):
 
         # Contexts Dictionary
         context = {
+            "projects": Project.objects.all(),
         }
 
         return super(ProjectPageView, self).render_to_response(context)
@@ -35,6 +38,7 @@ class EventPageView(TemplateView):
 
         # Contexts Dictionary
         context = {
+            "events": Event.objects.all(),
         }
 
         return super(EventPageView, self).render_to_response(context)
@@ -47,6 +51,7 @@ class TeamPageView(TemplateView):
 
         # Contexts Dictionary
         context = {
+            "members": TeamMember.objects.all(),
         }
 
         return super(TeamPageView, self).render_to_response(context)
@@ -70,6 +75,7 @@ class BlogPageView(TemplateView):
 
         # Contexts Dictionary
         context = {
+            "blogs": Blog.objects.all(),
         }
 
         return super(BlogPageView, self).render_to_response(context)

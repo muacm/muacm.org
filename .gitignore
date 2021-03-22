@@ -38,7 +38,7 @@ env.bak/
 venv.bak/
 
 # media
-media/
+# media/
 
 # server unrelated files
 cgi-bin
