@@ -1,15 +1,33 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block style %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/blogs.css' %}">
+{% endblock style %}
 
 {% block title %}
     <title> Blog Page </title>
 {% endblock title %}
 
+
 {% block body %}
-    <div class="container">
-        <h2> Blog Page </h2>
+    
+     <!--Blogs Section-->
+  <div class="blogs">
+    <h1 style="color: black; font-family: Poppins, monospace; text-align: center;">Our Blogs</h1>
+    <div class="blogs_container">
+
+     <div class="blog_card">
+        <img src="{% static 'demo_character.jpg' %}" alt="blog-name" class="blog_image">
+        <h3 class="blog_name">Title of the Blog</h3>
+        <p class="blog_date">12th March, 2021</p>
+        <a href="#" class="button">Read Blog</a>
+      </div>
+    
     </div>
+  </div>
+
+
 {% endblock body %}
 
 

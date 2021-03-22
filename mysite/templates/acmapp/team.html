@@ -1,15 +1,36 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block style %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/teams.css' %}">
+{% endblock style %}
+
 
 {% block title %}
     <title> Team Page </title>
 {% endblock title %}
 
 {% block body %}
-    <div class="container">
-        <h2> Team Page </h2>
+    
+  <div class="team">
+    <h1 style="color: black; font-family: Poppins, monospace; text-align: center;">Team Members</h1>
+    <div class="team_container">
+
+        <div class="profile_card">
+        <img src="{% static 'demo_character.jpg' %}" alt="profile-photo" class="profile_image">
+        <h3 class="profile_name">Yash Sehgal</h3>
+        <p class="profile_desc">Core Member (Junior Coordinator)</p>
+        <div class="profile_icons">
+          <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    
     </div>
+  </div>
+
 {% endblock body %}
 
 

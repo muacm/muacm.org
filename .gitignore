@@ -40,9 +40,6 @@ venv.bak/
 # media
 media/
 
-# static
-static/
-
 # server unrelated files
 cgi-bin
 tmp
