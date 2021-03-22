@@ -16,7 +16,10 @@
   
   <link rel="stylesheet" type="text/css" href="{% static 'css/teams.css' %}">
   <link rel="stylesheet" type="text/css" href="{% static 'css/blogs.css' %}">
+  
+  <link rel="stylesheet" type="text/css" href="{% static 'css/cards.css' %}">
 
+  
   {% block style %}
   {% endblock style %}
 
@@ -71,12 +74,12 @@
           </section>
           <section class="menu">
             <a href="{% url 'acmapp:home-page' %}" class="menu1"><b>HOME</b></a>
-            <a href="{% url 'acmapp:home-page' %}" class="menu2">ABOUT ACM</a>
-            <a href="{% url 'acmapp:blog-page' %}" class="menu3">BLOGS</a>
-            <a href="#teamID" class="menu3">TEAM</a>
-            <a href="{% url 'acmapp:project-page' %}" class="menu2">PAGES</a>
-            <a href="#eventID" class="menu3">EVENTS</a>
-            <a href="#contactID" class="menu3">CONTACT</a>
+            <a href="{% url 'acmapp:home-page' %}#aboutusID" class="menu2">ABOUT ACM</a>
+            <a href="{% url 'acmapp:blog-page' %}#blogID" class="menu3">BLOGS</a>
+            <a href="{% url 'acmapp:team-page' %}" class="menu3">TEAM</a>
+            <a href="{% url 'acmapp:project-page' %}" class="menu2">PROJECTS</a>
+            <a href="{% url 'acmapp:home-page' %}#eventID" class="menu3">EVENTS</a>
+            <a href="{% url 'acmapp:contact-page' %}" class="menu3">CONTACT</a>
           </section>
         </div>
         <!-- Nav bar end-->

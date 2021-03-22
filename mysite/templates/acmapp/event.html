@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block style %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/event.css' %}">
+{% endblock style %}
+
 {% block title %}
     <title> Event Page </title>
 {% endblock title %}
@@ -15,7 +19,7 @@
             <p class="event_desc">{{ event.description }}</p>
             <a href="#" class="button">See Events</a>
         </div>
-
+    {% endfor %}
     </div>
 {% endblock body %}
 

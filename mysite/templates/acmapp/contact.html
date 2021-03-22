@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block style %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/util.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/contact.css' %}">
+{% endblock style %}
 
 {% block title %}
     <title> Contact Page </title>
@@ -11,7 +15,7 @@
         <div id="color-overlay">
             <h1 class="text-center" style="color: white; padding-top: 100px;">Contact Us</h1>
         </div>
-        <img src="img/contact_banner.webp" width="100%" height="240px;">
+        <img src="{% static 'contact_banner.webp' %}" width="100%" height="240px;">
      </div>
     <br><br>
     <div class="container">
