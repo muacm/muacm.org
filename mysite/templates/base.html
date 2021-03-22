@@ -166,20 +166,21 @@
     var buttons = document.getElementsByClassName("sharer");
 
 
-<script>const chk = document.getElementById('chk');
+const chk = document.getElementById('chk');
 
     for(var i = 0; i < buttons.length; i += 1) {
         buttons[i].addEventListener("click", addMsg, false);
     }   
-  </script>
-{% block bodyScript %}
-{% endblock bodyScript %}
 
 
 chk.addEventListener('change', () => {
 	document.body.classList.toggle('dark');
 });
 </script>
+
+{% block bodyScript %}
+{% endblock bodyScript %}
+
 </body>
 
 </html>
