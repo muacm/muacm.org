@@ -1,14 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-
-
 .navbar {
   display: -webkit-box;
   display: -ms-flexbox;
-  background-color: #020F22;
-
   display: flex;
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   padding-left: 5rem;
   font-size: larger;
   position: fixed;
@@ -20,35 +16,26 @@
 .menu {
   position: relative;
   right: 10rem;
-  padding-top: 17px;
-  padding-left: 14rem;
+  padding-top: 20px;
 }
 
 .menu1,
 .menu2,
 .menu3 {
-  padding: 6px;
-  color: white;
+  padding: 15px;
+  color: black;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 1rem;
   font-family: "Poppins", sans-serif;
 }
 
 .logo {
   width: 14%;
 }
-/* my be name was for logo ? */
-.name {
-  line-height: 3rem;
-  font-size: 2rem;
-  font-weight: bold;
-  width: 20rem;
-  color: white;
-}
 
 .slider {
-  margin-top: 6rem;
-  height: 28rem;
+  margin-top: 10rem;
+  height: 30rem;
 }
 
 .swiper-container {
@@ -57,7 +44,7 @@
 }
 
 .swiper-slide {
-  color: #020F22;
+  color: black;
   font-family: "Poppins", sans-serif;
   font-size: 50px;
   /* Center slide text vertically */
@@ -65,11 +52,11 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .swiper-button-next {
@@ -121,7 +108,7 @@
 .event_card {
   width: 250px;
   -webkit-box-shadow: 12px 20px 120px #dfdfdf;
-          box-shadow: 12px 20px 120px #dfdfdf;
+  box-shadow: 12px 20px 120px #dfdfdf;
   padding: 2em;
   background-color: white;
   margin-right: 1em;
@@ -154,246 +141,3 @@
   text-decoration: none;
 }
 /*# sourceMappingURL=index.css.map */
-
-
-.f_container {
-  background-color: #ddd;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  height: auto;
-  font-family: 'Ubuntu', sans-serif;
-  margin-top: 50px;
-  -webkit-box-shadow: 0px 0px 10px rgba(136, 136, 136, 0.151);
-          box-shadow: 0px 0px 10px rgba(136, 136, 136, 0.151);
-  padding-top: 10px;
-  padding-bottom: 30px;
-}
-
-.box1 img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 100px;
-  width: 100px;
-  vertical-align: middle;
-}
-
-.box1 {
-  width: 150px;
-}
-;
-}
-
-#footer li,
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-#footer li {
-  font-weight: 300;
-  margin-top: 10px;
-}
-
-.box2 {
-  padding-top: 23px;
-}
-
-.box4 i {
-  padding-right: 15px;
-  color: #777777;
-}
-
-.bar {
-  height: 50px;
-  width: 100%;
-  background-color: #ddd;
-  font-family: 'Ubuntu';
-}
-
-#footer a {
-  text-decoration: none;
-  color: #373737;
-}
-
-#footer a:hover,
-a {
-  color: #000;
-  text-decoration: underline;
-}
-
-#footer .bar p {
-  margin: 0;
-  padding-left: 115px;
-}
-
-#footer .bar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-#footer .bar .iconContainer {
-  padding-right: 115px;
-  font-size: 20px;
-  vertical-align: middle;
-}
-
-#footer .bar .iconContainer i {
-  padding-left: 15px;
-  padding-right: 15px;
-  color: #777777;
-}
-
-#footer .bar .iconContainer i:hover {
-  color: #333;
-  cursor: pointer;
-}
-
-@media only screen and (max-width: 600px) {
-  .f_container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    text-align: center;
-  }
-  .box1 img {
-    -o-object-fit: cover;
-       object-fit: cover;
-    height: 100px;
-    width: 100px;
-    vertical-align: middle;
-  }
-  .box1 {
-    width: 200px;
-  }
-  #footer li,
-  ul {
-    list-style-type: none;
-    display: inline;
-    padding: 0 5px;
-  }
-  #footer li {
-    font-weight: 300;
-    margin-top: 10px;
-  }
-  .box2 {
-    padding-top: 23px;
-  }
-  .box4 i {
-    padding-right: 5px;
-    color: #777777;
-  }
-  .bar {
-    height: auto;
-    width: 100%;
-    background-color: #ddd;
-    font-family: 'Ubuntu';
-  }
-  #footer .bar p {
-    padding-left: 0px;
-  }
-  #footer .bar {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-  #footer .bar .iconContainer {
-    padding-right: 0px;
-    font-size: 20px;
-    vertical-align: middle;
-    margin-top: 15px;
-  }
-  #footer .bar .iconContainer i {
-    padding-left: 5px;
-    padding-right: 5px;
-    color: #777777;
-  }
-}
-/*# sourceMappingURL=footer.css.map */
-
-/*about page started*/
-.main-head {
-margin-top: 5rem;
-height: 26rem;
-background-color: #020F22;
-
-}
-
-.page-head {
-padding-top: 12rem;
-  color: white;
-  font-size: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.about-content {
-margin-bottom: 18rem;
-}
-
-.about-head {
-color: #0e0e0e;
-font-size: 35px;
-font-weight: 900;
-padding: 6rem 0rem 2rem 5rem;
-}
-
-.content {
-width: 35rem;
-margin: -6.5rem 0rem 0rem 23rem;
-z-index: 1;
-}
-
-/*contact page started*/
-
-.div1 {
-margin-bottom: 15rem;
-}
-
-.c-head {
-color: #0e0e0e;
-font-size: 35px;
-font-weight: 900;
-margin: 6rem ​0rem 0rem 13rem;
-}
-
-.contact-content {
-
-
-
-}

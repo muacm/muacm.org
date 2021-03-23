@@ -46,26 +46,30 @@
 
 .blogs_container {
   display: flex;
-  margin-top: 0.5em;
+  margin-top: 2em;
   margin-bottom: 0.5em;
 }
 
 .blog_card {
-  width: 250px;
+  width: 50%;
   box-shadow: 12px 20px 120px rgb(223, 223, 223);
   padding: 2em;
   background-color: white;
   margin-right: 1em;
   margin-left: 1em;
+  display: flex;
 }
 
 .blog_image {
-  width: 100%;
-  outline: black solid;
+  width: 200px;
+  height: 200px;
+  border: black solid;
+  border-radius: 100%;
 }
 
 .blog_name {
   color: black;
+  margin-top: 1em;
   font-family: "Poppins", monospace;
 }
 
@@ -83,4 +87,9 @@
 
 .button:hover {
   text-decoration: none;
+}
+
+.details {
+  display: block;
+  margin-left: 1em;
 }
