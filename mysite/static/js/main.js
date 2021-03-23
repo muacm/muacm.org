@@ -89,9 +89,8 @@
       }
     }
   };
-  
 
-  
+
 
   // set canvas to full screen
   function setWidthHeight() {

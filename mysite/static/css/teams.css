@@ -41,7 +41,9 @@
 }
 
 .team {
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8em;
   max-width: 1400px;
 }
 

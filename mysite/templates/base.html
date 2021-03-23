@@ -2,8 +2,6 @@
 {% load static %}
 <html lang="en">
 <head>
-
-  <link rel="stylesheet" type="text/css" href="{% static 'css/theme.css' %}">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,13 +19,15 @@
   
   <link rel="stylesheet" type="text/css" href="{% static 'css/cards.css' %}">
 
+  <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+
   
   {% block style %}
   {% endblock style %}
 
 
-  <link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/swiper-bundle.css" />
-  <link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   
   <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -46,14 +46,29 @@
 
 </head>
 <body>
+{% comment %} 
+  <script src="js/particle.js"></script>
+  <script src="js/main.js"></script>
+  <div class="container">
+    <canvas id="canvas"></canvas>
+  </div>
 
- 
- 
+  <div class="container">
+    <canvas>your browser is not support canvas,please upgrade your browser</canvas>
+    <div class="input">
+      <input type="text" id="updateText" placeholder="type your word">
+      <button id="updateButton">submit</button>
+    </div>
+    <div class="fork-me" style="position: absolute;right: 0px;top: 0px;z-index: 1001;">
+      <a href="https://github.com/chen844033231/particleText"><img src="images/forkme.png" width="149" height="149" alt="github" /></a>
+    </div>
+  </div>
+  <script src="js/particle.js"></script>
+  <script src="js/main.js"></script> {% endcomment %}
 
 <!--  Nav Bar -->
 {% comment %} <div class="upper"> {% endcomment %}
         <div class="navbar">
-          
           <section class="name">
             <a href="{% url 'acmapp:home-page' %}">
               <img src="{% static 'MuACMlogo.png' %}" alt="logo" class="logo">
@@ -67,19 +82,7 @@
             <a href="{% url 'acmapp:project-page' %}" class="menu2">PROJECTS</a>
             <a href="{% url 'acmapp:home-page' %}#eventID" class="menu3">EVENTS</a>
             <a href="{% url 'acmapp:contact-page' %}" class="menu3">CONTACT</a>
-            
           </section>
-          <div class = "theme">
-            <div>
-              <input type="checkbox" class="checkbox" id="chk" />
-              <label class="label" for="chk">
-                <i class="fas fa-moon"></i>
-                <i class="fas fa-sun"></i>
-                <div class="ball"></div>
-              </label>
-            </div>
-          </div>
-          
         </div>
         <!-- Nav bar end-->
   
@@ -91,15 +94,13 @@
         </div>
       {% endblock body %}
 
-    <!--  Chatbot df start-->    
-<df-messenger
-  intent="WELCOME"
-  chat-title="muacm"
-  agent-id="4907c2af-4153-42db-832a-d6f3fd52dd40"
-  language-code="en"
-></df-messenger>
-
-<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1%22%3E"</script>
+    <!--  Chatbot df start-->
+    <df-messenger
+    intent="WELCOME"
+    chat-title="muacm"
+    agent-id="4907c2af-4153-42db-832a-d6f3fd52dd40"
+    language-code="en"
+    ></df-messenger>
     <!--  Chatbot end-->
 
     
@@ -165,22 +166,12 @@
 
     var buttons = document.getElementsByClassName("sharer");
 
-
-const chk = document.getElementById('chk');
-
     for(var i = 0; i < buttons.length; i += 1) {
         buttons[i].addEventListener("click", addMsg, false);
     }   
-
-
-chk.addEventListener('change', () => {
-	document.body.classList.toggle('dark');
-});
-</script>
-
+  </script>
 {% block bodyScript %}
 {% endblock bodyScript %}
 
 </body>
-
 </html>
