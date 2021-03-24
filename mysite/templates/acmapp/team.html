@@ -1,39 +1,33 @@
-{% extends 'base.html' %}
-{% load static %}
-
-{% block style %}
-{% endblock style %}
-
-
-{% block title %}
-    <title> Team Page </title>
-{% endblock title %}
-
-{% block body %}
-    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/mysite/static/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+<title> Team Page </title>
+</head>
+<body>
   <div class="team">
     <h1 style="color: black; font-family: Poppins, monospace; text-align: center;">Team Members</h1>
     <div class="team_container">
-      {% for member in members %}
       <div class="profile_card">
-          <img src="{{ member.image.url }}" alt="profile-photo" class="profile_image">
-          <h3 class="profile_name">{{ member.name }}</h3>
-          <p class="profile_desc">{{ member.post }}</p>
-          <div class="profile_icons">
-            <a href="{{ member.linkedin }}" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="{{ member.email }}" target="_blank">email<i class="fab fa-twitter-square"></i></a>
-            <a href="#" target="_blank">delete<i class="fab fa-facebook"></i></a>
-            <a href="#" target="_blank">delete<i class="fab fa-instagram"></i></a>
+        <img src="/mysite/static/demo_character.jpg" alt="profile-photo" class="profile_image">
+        <h3 class="profile_name">Member Name</h3>
+        <p class="profile_desc">Post of the Member</p>
+        <div class="profile_icons">
+          <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
         </div>
       </div>
-      {% endfor %}
-    
     </div>
   </div>
 
-{% endblock body %}
-
-
-
-{% block script %}
-{% endblock script %}
+</body>
+</html>
+    
+    
+  
