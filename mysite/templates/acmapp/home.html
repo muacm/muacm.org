@@ -4,87 +4,84 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/mysite/static/main.css">
-  <title> Home Page </title>
+  <title>MU-ACM</title>
+  <link rel="stylesheet" href="../../static/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="slider">
-    <!-- Swiper -->
-    <div class="swiper-container">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">Slide 1</div>
-        <div class="swiper-slide">Slide 2</div>
-      </div>
-      <!-- Add Arrows -->
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-    </div>
-  
-  </div>
-  
-  </div> 
-  
-  
-  <div class="container">
+
+  <div class="header-i">
     <canvas id="canvas"></canvas>
   </div>
   
-  <div class="container">
+  
+  <div class="container" style="display: none;">
     <canvas>your browser is not support canvas,please upgrade your browser</canvas>
-    <div class="input">
-      <input type="text" id="updateText" placeholder="type your word">
-      <button id="updateButton">submit</button>
-    </div>
-    <div class="fork-me" style="position: absolute;right: 0px;top: 0px;z-index: 1001;">
-      <a href="https://github.com/chen844033231/particleText"><img src="images/forkme.png" width="149" height="149"
-          alt="github" /></a>
+   <div class="input">
+      <button id="updateButton" style="display: none;">submit</button>
     </div>
   </div>
   
-  
-  <script src="/mysite/static/js/particle.js"></script>
-  <script src="/mysite/static/js/main.js"></script>
-  
-  
-  <div class="about_us" id="aboutusID">
-    <h1 class="headline">About ACM Medicaps Chapter</h1>
+  <br><br>
+  <div class="about_us container" id="aboutusID">
+    <h1 class="headline">About ACM Medicaps Chapter</h1> <br>
     <p class="about_us_description">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati veniam fugit nemo non veritatis dolor ipsa
-      facilis, nihil consequuntur aperiam ullam recusandae doloribus perspiciatis, quo aliquid saepe a vel illo.
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum molestiae saepe accusantium id fugit tempore commodi
-      delectus voluptates dolorem a illo laborum dolorum sapiente exercitationem minima eligendi, ab cumque et?
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus ea harum quod neque. Architecto distinctio minima quisquam id asperiores qui nobis itaque quidem optio, perferendis exercitationem eos est hic corporis! Vel perferendis cum, unde commodi quia nostrum officiis, itaque vero dignissimos exercitationem ipsum numquam laborum dolor eveniet voluptates ea maxime? Soluta hic eligendi nobis. Nam incidunt sit, libero perspiciatis voluptates ad, blanditiis quos facilis facere error exercitationem maiores temporibus officia harum non recusandae soluta minima ex placeat qui! Deserunt, soluta?
     </p>
-  </div>
+  </div> <br><br>
   
-  <div class="team" id="teamID">
-    <h1 style="color: black; font-family: Poppins, monospace; text-align: center;">Team Members</h1>
+  <div class="team container" id="teamID">
+    <hr><h2>Team Members</h2> <br> <br><br>
     <div class="team_container">
   
-      <div class="profile_card">
-        <img src="demo_character.jpg" alt="profile-photo" class="profile_image">
-        <h3 class="profile_name">John Doe</h3>
-        <p class="profile_desc">Position Name</p>
-        <div class="profile_icons">
-          <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a>
-          <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="../../static/demo_character.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">John Doe</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Social Media Links</a>
         </div>
       </div>
-  
-    </div>
-    <a href="/mysite/templates/acmapp/team.html">More</a>
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="../../static/demo_character.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">John Doe</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Social Media Links</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="../../static/demo_character.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">John Doe</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Social Media Links</a>
+        </div>
+      </div>
+   </div>
+
+
   </div>
-  
-  <div class="events" id="eventID">
-    <h1 style="color: black; font-family: Poppins, monospace; text-align: center;">Events</h1>
+  <br><br>
+  <div class="events container" id="eventID">
+    <hr><h2>Events</h2> <br> <br><br>
     <div class="event_container">
   
-      <div class="event_card">
-        <img src="demo_character.jpg" alt="event-name" class="event_image">
-        <h3 class="event_name">Name of the Event</h3>
-        <p class="event_desc">Lorem ipsum dolor sit amet consectetur.</p>
-        <a href="#" class="button">See Events</a>
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="../../static/demo_character.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="../../static/demo_character.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
       </div>
   
     </div>
@@ -108,6 +105,12 @@
 
 </body>
 </html>
+<script src="../../static/js/particle.js"></script>
+<script src="../../static/js/main.js"></script>
+<script src="../../static/demo_character.jpg"></script>    
+</body>
+</html>
+</head>
     
 
     
