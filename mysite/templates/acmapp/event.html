@@ -1,27 +1,28 @@
-{% extends 'base.html' %}
-{% load static %}
-
-{% block style %}
-  <link rel="stylesheet" type="text/css" href="{% static 'css/event.css' %}">
-{% endblock style %}
-
-{% block title %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/mysite/static/main.css">
     <title> Event Page </title>
-{% endblock title %}
-
-{% block body %}
+</head>
+<body>
     <h1 style="color: black; font-family: Poppins, monospace; text-align: center;">Events</h1>
     <div class="event_container">
-    {% for event in events %}
+    
         <div class="event_card">
-            <img src="{{ event.image.url }}" alt="event-name" class="event_image">
-            <h3 class="event_name">{{ event.title }}</h3>
-            <p class="event_desc">{{ event.description }}</p>
+            <img src="/mysite/static/demo_character.jpg" alt="event-name" class="event_image">
+            <h3 class="event_name">Event Title Here</h3>
+            <p class="event_desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam, voluptates!</p>
             <a href="#" class="button">See Events</a>
         </div>
-    {% endfor %}
+    
     </div>
-{% endblock body %}
+</body>
+</html>
+  
 
-{% block script %}
-{% endblock script %}
+
+    
+
