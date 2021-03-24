@@ -76,6 +76,7 @@
 .blog_date {
   font-family: "Poppins", monospace;
   font-size: small;
+  color: gray;
 }
 
 .button {
@@ -92,4 +93,25 @@
 .details {
   display: block;
   margin-left: 1em;
+}
+
+.blog_content {
+  font-family: "Poppins", sans-serif;
+}
+
+.author_name {
+  font-family: "Poppins", sans-serif;
+}
+
+@media screen and (max-width: 1000px) {
+  .blogs_container {
+    display: block;
+  }
+  .blog_card {
+    margin-top: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+  }
 }

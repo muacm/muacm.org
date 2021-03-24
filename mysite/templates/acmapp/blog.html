@@ -1,33 +1,20 @@
-{% extends 'base.html' %}
-{% load static %}
 
-{% block style %}
-{% endblock style %}
-
-{% block title %}
-<title> Blog Page </title>
-{% endblock title %}
-
-
-{% block body %}
-    
-     <!--Blogs Section-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/mysite/static/main.css">
+  <title> Blog Page </title>
+</head>
+<body>
   <div class="blogs">
     <h1 style="color: black; font-family: Poppins, monospace; text-align: center;">Our Blogs</h1>
     <div class="blogs_container">
-
-     <div class="blog_card">
-        <img src="{% static 'demo_character.jpg' %}" alt="blog-name" class="blog_image">
-        <div class="details">
-          <h3 class="blog_name">Title of the Blog</h3>
-          <p class="blog_content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, dolores...</p>
-          <p class="blog_date"><b>12th March, 2021</b></p>
-          <p class="author_name">By, John Doe</p>
-        </div>
-      </div>
-
+  
       <div class="blog_card">
-        <img src="{% static 'demo_character.jpg' %}" alt="blog-name" class="blog_image">
+        <img src="/mysite/static/demo_character.jpg" alt="blog-name" class="blog_image">
         <div class="details">
           <h3 class="blog_name">Title of the Blog</h3>
           <p class="blog_content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, dolores...</p>
@@ -35,15 +22,22 @@
           <p class="author_name">By, John Doe</p>
         </div>
       </div>
+  
+      <div class="blog_card">
+        <img src="/mysite/static/demo_character.jpg" alt="blog-name" class="blog_image">
+        <div class="details">
+          <h3 class="blog_name">Title of the Blog</h3>
+          <p class="blog_content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, dolores...</p>
+          <p class="blog_date"><b>12th March, 2021</b></p>
+          <p class="author_name">By, John Doe</p>
+        </div>
+      </div>
+  
     </div>
-
   </div>
-</div>
+</body>
+</html>
 
 
-{% endblock body %}
 
 
-
-{% block script %}
-{% endblock script %}
