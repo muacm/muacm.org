@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/medicapshosting/public_html/muacm.org/
+    - /bin/cp home.html $DEPLOYPATH
+    - /bin/cp style.css $DEPLOYPATH
