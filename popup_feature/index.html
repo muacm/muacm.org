@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(".btn1").click(function () {
+        $(".stickynote").fadeOut();
+      });
+      $(".btn2").click(function () {
+        $(".stickynote").fadeIn();
+      });
+    });
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="stickynote">
+    <p class="quote">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <img src="assets/pin.png" alt="pin" class="pin" />
+  </div>
+
+  <button class="btn1">Fade out</button>
+  <button class="btn2">Fade in</button>
+
+</body>
+
+</html>

@@ -3,18 +3,26 @@ body{
     color: whitesmoke;
 }
 .header-i{
-    background-image: url('../../static/background.jpg');
-    background-position: center;
-    background-size: contain;
+    background-image: url('static/background.jpg');
     display: flex;
-    width: 100vw;
     flex-direction: column;
+    height: 80vh;
+    width: 100vw;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    text-align: center;
+    background-position: center;
+    background-size: contain;
   }
+nav{
+    color: white !important;
+}
 .profile_image{
     height: 30vh;
+}
+.logo{
+    height: 10%;
+    width: 10%;
 }
 .event_image{
     height: 10vh;
