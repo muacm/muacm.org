@@ -1,9 +1,0 @@
-#Windows
-
-    $env:DJANGO_SETTINGS_MODULE='mysite.settings.prod'
-    $env:DJANGO_SECRET_KEY='jahg48r8tw8v4ylr84n9cywrtv3_cv35650'
-
-#bash terminal
-
-    export DJANGO_SETTINGS_MODULE='mysite.settings.prod'
-    export DJANGO_SECRET_KEY='jahg48r8tw8v4ylr84n9cywrtv3_cv35650'
