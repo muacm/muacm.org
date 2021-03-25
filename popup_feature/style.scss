@@ -1,0 +1,19 @@
+.stickynote {
+  background-color: black;
+  width: 250px;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  // overflow: hidden;
+  display: flex;
+}
+
+.quote {
+  color: white;
+  font-weight: 500;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+.pin {
+  width: 54px;
+  height: 54px;
+}
