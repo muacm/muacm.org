@@ -13,6 +13,28 @@
   window.addEventListener("mousemove", mouseMove, false);
   window.addEventListener("touchmove", touchMove, false);
 
+  window.onload = function() {
+    var img = document.getElementById('target');
+    var width = img.naturalWidth;
+    var height = img.naturalHeight;
+
+    var canvas = document.createElement('canvas'); //Create a canvas element
+    //Set canvas width/height
+    canvas.style.width=width;
+    canvas.id = 'mycanvas';
+    canvas.style.height=height;
+    //Set canvas drawing area width/height
+    canvas.width = width;
+    canvas.height = height-100;
+    //Position canvas
+    canvas.style.position='relative';
+    canvas.style.left=0;
+    canvas.style.top=0;
+    canvas.style.zIndex=100000;
+    canvas.style.pointerEvents='none'; //Make sure you can click 'through' the canvas
+    $('#container').append(canvas);
+}
+
   updateButton.onclick = function(){
     TEXT = updateText.value || TEXT;
     main();
@@ -61,14 +83,16 @@
       // createLinearGradient
       var gradient = ctx.createLinearGradient(0, 0, WIDTH, 0);
       gradient.addColorStop("0", "white");
-      gradient.addColorStop("0.2", "gold");
-      gradient.addColorStop("0.5", "pink");
-      gradient.addColorStop("0.7", "white");
-      gradient.addColorStop("1.0", "red");
+      gradient.addColorStop("0.4", "orange");
+      gradient.addColorStop("0.4", "orange");
+      gradient.addColorStop("1.0", "white");
+      gradient.addColorStop("1.0", "white");
+      gradient.addColorStop("0.7", "green");
+      gradient.addColorStop("0.7", "green");
       // lineGradient
       ctx.strokeStyle = gradient;
       var textWidth = ctx.measureText(TEXT).width;
-      ctx.strokeText(TEXT, WIDTH/2 - textWidth/2, HEIGHT/2);
+      ctx.strokeText(TEXT, WIDTH/2 - textWidth/2, HEIGHT/15);
       // get particle from canvas
       var imgData = ctx.getImageData(0, 0, WIDTH, HEIGHT);
       for (var i = 0, len = imgData.data.length; i < len; i = i + 4) {
@@ -96,6 +120,9 @@
   function setWidthHeight() {
     WIDTH = canvas.width = parseInt(window.getComputedStyle(document.querySelector('body')).width);
     HEIGHT = canvas.height = parseInt(window.getComputedStyle(document.querySelector('body')).height);
+    canvas.height = canvas.height - 2500;
+    //canvas.width = canvas.width - 100;
+
   }
   // mouse move event
   function mouseMove(event) {
