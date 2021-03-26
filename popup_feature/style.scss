@@ -1,19 +1,26 @@
-.stickynote {
-  background-color: black;
-  width: 250px;
-  font-family: "Poppins", sans-serif;
+/// importing google.fonts
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
+
+#stickynote {
+  width: 260px;
+  height: 80px;
   box-sizing: border-box;
-  // overflow: hidden;
+  overflow: hidden;
   display: flex;
+  border-radius: 4px;
 }
 
 .quote {
-  color: white;
   font-weight: 500;
   padding-left: 4px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
   padding-right: 4px;
+  margin: auto;
 }
+
 .pin {
-  width: 54px;
-  height: 54px;
+  width: 45px;
+  height: 45px;
 }
