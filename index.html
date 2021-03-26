@@ -16,7 +16,7 @@
   
   
   <div class="container" style="display: none;">
-    <canvas>your browser is not support canvas,please upgrade your browser</canvas>
+    <canvas>your browser is not support canvas, please upgrade your browser</canvas>
    <div class="input">
       <button id="updateButton" style="display: none;">submit</button>
     </div>
@@ -30,6 +30,16 @@
     </p>
   </div> <br><br>
   
+  <!--  Chatbot df start-->
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1%22%3E"></script>
+  <df-messenger
+    intent="WELCOME"
+    chat-title="muacm"
+    agent-id="4907c2af-4153-42db-832a-d6f3fd52dd40"
+    language-code="en"
+  ></df-messenger>
+  <!--  Chatbot end-->
+
   <div class="team container" id="teamID">
     <hr><h2>Team Members</h2> <br> <br><br>
     <div class="team_container">
@@ -111,9 +121,3 @@
 </body>
 </html>
 </head>
-    
-
-    
-
-
-
