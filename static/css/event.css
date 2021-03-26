@@ -1,0 +1,171 @@
+body{
+    background-color: #121212;
+}
+.main-timeline{ font-family: 'Roboto', sans-serif; }
+.main-timeline:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.logo{
+    height: 10%;
+    width: 10%;
+}
+.main-timeline .timeline{
+    width: 50%;
+    padding: 0 65px 0 0;
+    margin: 0 5px 0 0;
+    float: left;
+}
+.main-timeline .timeline-content{
+    color: #fff;
+    background: #6bb24c;
+    text-shadow: 0 0 3px rgba(0,0,0,0.2);
+    min-height: 155px;
+    padding: 25px 75px 25px 25px;
+    border: 10px solid #86ce69;
+    border-right-width: 0;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+.main-timeline .timeline-content:hover{ text-decoration: none; }
+.main-timeline .timeline-content:before,
+.main-timeline .timeline-content:after{
+    content: '';
+    background-color: #86ce69;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    top: 10px;
+    right: 60px;
+    z-index: -1;
+}
+.main-timeline .timeline-content:after{
+    height: 80px;
+    width: 65px;
+    transform: translateY(-50%);
+    right: -65px;
+    left: auto;
+    top: 50%;
+    bottom: auto;
+}
+.main-timeline .timeline-year{
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    transform: translateY(-54%);
+    position: absolute;
+    top: 50%;
+    right: -52px;
+}
+.main-timeline .title{
+    font-size: 22px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0 0 5px;
+}
+.main-timeline .description{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 1px;
+    margin: 0;
+}
+.main-timeline .timeline:nth-child(even){
+    padding: 0 0 0 65px;
+    margin: 0 0 0 5px;
+    float: right;
+}
+.main-timeline .timeline:nth-child(even) .timeline-content{
+    padding: 25px 25px 25px 75px;
+    border-right-width: 10px;
+    border-left-width: 0;
+}
+.main-timeline .timeline:nth-child(even) .timeline-content:before{
+    right: 10px;
+    left: 60px;
+}
+.main-timeline .timeline:nth-child(even) .timeline-content:after{
+    right: auto;
+    left: -65px;
+}
+.main-timeline .timeline:nth-child(even) .timeline-year{
+    right: auto;
+    left: -54px;
+}
+.main-timeline .timeline:nth-child(4n+2) .timeline-content{
+    background: #247AC2;
+    border-color: #409FD9;
+}
+.main-timeline .timeline:nth-child(4n+2) .timeline-content:before,
+.main-timeline .timeline:nth-child(4n+2) .timeline-content:after{
+    background-color: #409FD9;
+}
+.main-timeline .timeline:nth-child(4n+3) .timeline-content{
+    background: #2093A8;
+    border-color: #3EB3C5;
+}
+.main-timeline .timeline:nth-child(4n+3) .timeline-content:before,
+.main-timeline .timeline:nth-child(4n+3) .timeline-content:after{
+    background-color: #3EB3C5;
+}
+.main-timeline .timeline:nth-child(4n+4) .timeline-content{
+    background: #31455E;
+    border-color: #4C6480;
+}
+.main-timeline .timeline:nth-child(4n+4) .timeline-content:before,
+.main-timeline .timeline:nth-child(4n+4) .timeline-content:after{
+    background-color: #4C6480;
+}
+@media screen and (max-width:990px){
+    .main-timeline .timeline,
+    .main-timeline .timeline:nth-child(even){
+        width: calc(50% + 35px);
+    }
+}
+@media screen and (max-width:767px){
+    .main-timeline .timeline,
+    .main-timeline .timeline:nth-child(even){
+        width: 100%;
+        margin: 0 0 30px;
+    }
+}
+@media screen and (max-width:576px){
+    .main-timeline .timeline,
+    .main-timeline .timeline:nth-child(even){
+        padding: 40px 0 0;
+    }
+    .main-timeline .timeline-content,
+    .main-timeline .timeline:nth-child(even) .timeline-content{
+        text-align: center;
+        padding: 55px 25px 25px;
+        border-right-width: 10px;
+        border-left-width: 10px;
+        border-top-width: 0;
+    }
+    .main-timeline .timeline-content:before,
+    .main-timeline .timeline:nth-child(even) .timeline-content:before{
+        top: 35px;
+        right: 10px;
+        left: 10px;
+    }
+    .main-timeline .timeline-content:after,
+    .main-timeline .timeline:nth-child(even) .timeline-content:after{
+        width: 130px;
+        height: 40px;
+        transform: translateY(0) translateX(-50%);
+        left: 50%;
+        right: auto;
+        top: -40px;
+    }
+    .main-timeline .timeline-year,
+    .main-timeline .timeline:nth-child(even) .timeline-year{
+        transform: translateY(0) translateX(-50%);
+        left: 50%;
+        right: auto;
+        top: -45px;
+    }
+}
