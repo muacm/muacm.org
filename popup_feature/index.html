@@ -1,31 +1,38 @@
+
 <!DOCTYPE html>
 <html>
 
 <head>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script>
-    $(document).ready(function () {
-      $(".btn1").click(function () {
-        $(".stickynote").fadeOut();
-      });
-      $(".btn2").click(function () {
-        $(".stickynote").fadeIn();
-      });
-    });
-  </script>
+  <title>
+    popup loader
+  </title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
-  <div class="stickynote">
+  <!-- <div id="stickynote">
     <p class="quote">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
     <img src="assets/pin.png" alt="pin" class="pin" />
-  </div>
+  </div> -->
+  <div id="popup"></div>
 
-  <button class="btn1">Fade out</button>
-  <button class="btn2">Fade in</button>
+  <script src="popup.js"></script>
+  <script type="text/javascript">
+    window.onload = fadeIn;
 
+    function fadeIn() {
+      var fade = document.getElementById("stickynote");
+      var opacity = 0;
+      var intervalID = setInterval(function () {
+
+        if (opacity < 1) {
+          opacity = opacity + 0.1
+          fade.style.opacity = opacity;
+        } else {
+          clearInterval(intervalID);
+        }
+      }, 150);
+    }
+  </script>
 </body>
-
 </html>
