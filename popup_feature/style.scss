@@ -1,19 +1,33 @@
-.stickynote {
-  background-color: black;
-  width: 250px;
-  font-family: "Poppins", sans-serif;
-  box-sizing: border-box;
-  // overflow: hidden;
+/// importing google.fonts
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
+#popup {
   display: flex;
+  margin: auto;
+  max-width: 1400px;
 }
 
-.quote {
-  color: white;
-  font-weight: 500;
-  padding-left: 4px;
-  padding-right: 4px;
+.notification {
+  width: 20%;
+  overflow: hidden;
+  height: 200px;
+  // text-align: center;
+  margin-right: 3em;
+  box-shadow: 2px 4px 18px rgba(68, 68, 68, 0.541);
 }
+
+.notification-upper-bar {
+  // width: fit-content;
+  display: flex;
+  top: 0;
+  box-shadow: 2px 4px 18px rgba(68, 68, 68, 0.541);
+}
+
 .pin {
-  width: 54px;
-  height: 54px;
+  width: 30px;
+  right: 0;
+}
+
+.notification-content {
+  text-align: center;
 }
