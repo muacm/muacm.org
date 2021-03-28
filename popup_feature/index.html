@@ -7,13 +7,20 @@
     popup loader
   </title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+  $(".btn1").click(function(){
+    $(document.getElementsByClassName("notification")).fadeOut();
+  });
+  $(".btn2").click(function(){
+    $(document.getElementsByClassName("notification")).fadeIn();
+  });
+});
+  </script>
 </head>
 
 <body>
-  <!-- <div id="stickynote">
-    <p class="quote">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-    <img src="assets/pin.png" alt="pin" class="pin" />
-  </div> -->
   <div id="popup"></div>
 
   <script src="popup.js"></script>
@@ -21,7 +28,7 @@
     window.onload = fadeIn;
 
     function fadeIn() {
-      var fade = document.getElementById("stickynote");
+      var fade = document.getElementsByClassName("notification");
       var opacity = 0;
       var intervalID = setInterval(function () {
 
@@ -31,8 +38,10 @@
         } else {
           clearInterval(intervalID);
         }
-      }, 150);
+      }, 600);
     }
   </script>
+<button class="btn1">Fade out</button>
+<button class="btn2">Fade in</button>
 </body>
 </html>
