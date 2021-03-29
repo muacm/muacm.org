@@ -1,19 +1,36 @@
 body{
-    background-color: #121212;
+    background-color: #1d2d44;
     color: whitesmoke;
+    
 }
 .header-i{
     background-image: url('static/background.jpg');
     display: grid;
     place-content: center;
     place-items: center;
-    height: 80vh;
+    height: 100%;
     width: 100vw;
     background-position: center;
     background-size: contain;
   }
+.nav-item{
+    font-size: large;
+}
+a{
+    text-decoration: none !important;
+}
+.social-handles{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    place-items: center;
+}
 nav{
     color: white !important;
+    background: rgba( 247, 240, 240, 0.35 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    
 }
 .profile_image{
     height: 30vh;
@@ -22,8 +39,11 @@ nav{
     height: 10%;
     width: 10%;
 }
-.event_image{
-    height: 10vh;
+.event{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .team_container{
     display: grid;
@@ -34,6 +54,11 @@ nav{
     display: grid;
     grid-template-columns: 50% 50%;
     grid-gap: 2rem;
+}
+.rounded-circle{
+    height: 30vh;
+    filter: blur(10%);
+    background: inherit;
 }
 .card{
     background-color: rgb(31, 31, 31);
