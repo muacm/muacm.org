@@ -1,17 +1,4 @@
-.navbar {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    font-size: larger;
-    position: fixed;
-    top: 0;
-    background-color: white;
-    width: 100%;
-    overflow: hidden;
-  }
-  
+
   .menu {
     position: absolute;
     right: 10rem;
@@ -50,7 +37,6 @@
     -webkit-box-shadow: 12px 20px 120px #dfdfdf;
             box-shadow: 12px 20px 120px #dfdfdf;
     padding: 2em;
-    background-color: white;
     margin-right: 1em;
     margin-left: 1em;
   }
@@ -511,6 +497,16 @@
 
 
   .wrimagecard{	
+    margin-top: 0;
+      margin-bottom: 1.5rem;
+      text-align: left;
+      position: relative;
+      background: #3e5c76;
+      box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.15);
+      border-radius: 10px;
+      transition: all 0.3s ease;
+  }
+  .wrimagecard-2{	
     margin-top: 0;
       margin-bottom: 1.5rem;
       text-align: left;
