@@ -14,7 +14,7 @@ const generatePopupNotification = function generatePopupNotification(message) {
   let notification_upper_bar = document.createElement("div");
   notification_upper_bar.className = "notification-upper-bar";
   notification_upper_bar.style.backgroundColor = colors[random_color_index];
-
+  
   let notification_pin = document.createElement("img");
   notification_pin.className = "pin";
   notification_pin.src = "assets/pin.png";
