@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <div id="write">
+        <button onclick="add()">Add</button>
+    </div>
+    <div id="show">
+
+    </div>
+</body>
+<script src="blogs.js"></script>
+<script>
+    var space = document.getElementById("show").innerHTML+= (blogs.map(blog=>('<h1>'+blog.title+'</h1>')))
+    function add(){
+        blogs.push({id: 1, title: 'blog 3' , content:'abcd'})
+        console.log(blogs.map(blog=>(blog.title)))
+    }
+</script>
+</html>
