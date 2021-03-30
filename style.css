@@ -105,7 +105,8 @@ hr + h2 {
 }
 
 .profile_card {
-    width: 250px;
+    width: 24%;
+    height: fit-content;
     text-align: center;
     background-color: #182538;
     padding: 1em;
@@ -113,6 +114,7 @@ hr + h2 {
     margin-right: 1em;
     margin-left: 1em;
     margin: auto;
+    border-radius: 100%;
 }
 
 .fab {
@@ -177,3 +179,11 @@ hr + h2 {
     margin-right: auto;
     max-width: 1400px;
 }
+
+
+
+/*node connection lines css*/
+/* .center_line {
+    margin-left: 30em;
+    margin-right: auto;
+} */
