@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+body{
+  background-color: #1d2d44;
+}
 .navbar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -54,8 +57,7 @@
 
 .blog_card {
   width: 50%;
-  -webkit-box-shadow: 12px 20px 120px #dfdfdf;
-          box-shadow: 12px 20px 120px #dfdfdf;
+
   padding: 2em;
   background-color: white;
   margin-right: 1em;
