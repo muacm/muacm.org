@@ -58,6 +58,20 @@
   <!--Canvas-->
   <div class="header-i" id="canvasdiv" style="margin: 2px; height: 80vh; width: 100%;">
     <canvas id="mycanvas" width=10 height=10"></canvas>
+    <script>
+      var i = 0;
+      var txt = 'To the World ahead needs research and we aim for the same.';
+      var speed = 35;
+
+      function typeWriter() {
+        if (i < txt.length) {
+          document.getElementById("demo").innerHTML += txt.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+        }
+      }
+      typeWriter()
+      </script>
   </div>
 
   <!--<div class="header-i">
@@ -284,4 +298,7 @@ window.onscroll = function () {
     }
 };
 </script>
+
+
+
 </html>
