@@ -76,19 +76,19 @@
 
     function createParticles() {
       if(WIDTH < 480) {
-        ctx.font = "30px 'Microsoft Yahei'";
+        ctx.font = "30px 'Times New Roman'";
       }else {
-        ctx.font = "80px 'Microsoft Yahei'";
+        ctx.font = "80px 'Times New Roman'";
       }
       // createLinearGradient
       var gradient = ctx.createLinearGradient(0, 0, WIDTH, 0);
       gradient.addColorStop("0", "white");
-      gradient.addColorStop("0.4", "orange");
-      gradient.addColorStop("0.4", "orange");
-      gradient.addColorStop("1.0", "white");
-      gradient.addColorStop("1.0", "white");
-      gradient.addColorStop("0.7", "green");
-      gradient.addColorStop("0.7", "green");
+      gradient.addColorStop("0.8", "cyan");
+      gradient.addColorStop("0.4", "#00bfff");
+      gradient.addColorStop("0.6", "#00ffff");
+      //gradient.addColorStop("1.0", "");
+      //gradient.addColorStop("0.7", "green");
+      //gradient.addColorStop("0.7", "green");
       // lineGradient
       ctx.strokeStyle = gradient;
       var textWidth = ctx.measureText(TEXT).width;
