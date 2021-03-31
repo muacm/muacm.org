@@ -92,7 +92,7 @@
       // lineGradient
       ctx.strokeStyle = gradient;
       var textWidth = ctx.measureText(TEXT).width;
-      ctx.strokeText(TEXT, WIDTH/2 - textWidth/2, HEIGHT/15);
+      ctx.strokeText(TEXT, WIDTH/2 - textWidth/2, HEIGHT/11);
       // get particle from canvas
       var imgData = ctx.getImageData(0, 0, WIDTH, HEIGHT);
       for (var i = 0, len = imgData.data.length; i < len; i = i + 4) {
@@ -120,7 +120,7 @@
   function setWidthHeight() {
     WIDTH = canvas.width = parseInt(window.getComputedStyle(document.querySelector('body')).width);
     HEIGHT = canvas.height = parseInt(window.getComputedStyle(document.querySelector('body')).height);
-    canvas.height = canvas.height - 2500;
+    canvas.height = canvas.height - 3000;
     //canvas.width = canvas.width - 100;
 
   }
