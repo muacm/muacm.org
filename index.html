@@ -311,7 +311,7 @@ window.onscroll = function () {
 };
 </script>
 <script>
-  (function makeDiv(){
+  setTimeout((function makeDiv(){
   var divsize = 15*15;
   msgs = ['hello', 'lorem ipsum', 'some message']
   colors = ['orange', 'yellow', 'green', 'cyan', 'pink']
@@ -323,8 +323,8 @@ window.onscroll = function () {
       'background-color': color,
      
   }).append('<div><img src="pin.png"></div><br><hr class="noti"><br>').append(msg).addClass('notification');
-  x= [5, 1250]
-  y= [5,30, 500]
+  x= [10, 1250]
+  y= [120, 500]
   const xp = x[Math.floor(Math.random() * x.length)];
   const yp = y[Math.floor(Math.random() * y.length)];
   var posx = xp;
@@ -335,11 +335,11 @@ window.onscroll = function () {
       'left':posx+'px',
       'top':posy+'px',
       'text-align' : 'center'
-  }).appendTo( 'body' ).fadeIn(100).delay(5000).fadeOut(200, function(){
+  }).appendTo( 'body' ).fadeIn(100).delay(10000).fadeOut(200, function(){
      $(this).remove();
      makeDiv(); 
   }); 
-})();
+})(),5000);
 
 </script>
 
