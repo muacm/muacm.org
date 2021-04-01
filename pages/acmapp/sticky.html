@@ -5,37 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="notification.css">
     <style>
-        .in{
-            background-color: brown;
-            color: white;
-            width: 20vw;
-            text-align: center;
-            padding: 1%;
-            border-radius: 10px;
-            transition: ease-in-out;
-            transition-duration: 1s;
+        img{
+            height: 5vh;
         }
     </style>
 </head>
 <body>
-    <div class="in" id="note">
-        <h2>Some Note</h2>
-    </div>
-</body>
-</html>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../../static/jquery-3.5.1.js"></script>
 <script>
-    AOS.init();
-</script>
-<script>
-    var note = document.getElementById('note');
-    for(var i=0; i<10; i++){
-        setTimeout(function(){ note.style.position = "absolute";
-        note.style.left = 20+i+'px';
-        note.style.top = 40+i+'px'; note.style.display='block'; note.setAttribute('data-aos', '') }, 001);
-        setTimeout(function(){ note.className='out', note.setAttribute('data-aos', 'fade-left') }, 5000);
-    }
+    (function makeDiv(){
+    var divsize = 15*15;
+    msgs = ['hello', 'lorem ipsum', 'some message']
+    colors = ['orange', 'yellow', 'green', 'cyan', 'pink']
+    const color = colors[Math.floor(Math.random() * colors.length)]; 
+    const msg = msgs[Math.floor(Math.random() * msgs.length)];
+    $newdiv = $('<div/>').css({
+        'width':divsize+'px',
+        'height':divsize+'px',
+        'background-color': color,
+       
+    }).append('<div><img src="pin.png"></div><hr><br>').append(msg).addClass('notification');
+    x= [5, 1250]
+    y= [5,30, 500]
+    const xp = x[Math.floor(Math.random() * x.length)];
+    const yp = y[Math.floor(Math.random() * y.length)];
+    var posx = xp;
+    var posy = yp;
+    
+    $newdiv.css({
+        'position':'absolute',
+        'left':posx+'px',
+        'top':posy+'px',
+        'text-align' : 'center'
+    }).appendTo( 'body' ).fadeIn(100).delay(5000).fadeOut(200, function(){
+       $(this).remove();
+       makeDiv(); 
+    }); 
+})();
 
 </script>
+</body>
+</html>
