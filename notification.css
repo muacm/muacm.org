@@ -6,14 +6,24 @@
   margin: auto;
   max-width: 1400px;
 }
-
+img{
+  height: 5vh;
+}
+.noti{
+  display: block;
+  margin: 0%;
+}
 .notification {
   width: 20%;
   overflow: hidden;
+  font-family: cursive;
   height: 200px;
+  font-size: larger;
+  color: black !important;
   margin-right: 3em;
   -webkit-box-shadow: 2px 4px 18px rgba(68, 68, 68, 0.541);
           box-shadow: 2px 4px 18px rgba(68, 68, 68, 0.541);
+  z-index: 1;
 }
 
 .notification-upper-bar {
