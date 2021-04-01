@@ -11,7 +11,7 @@
 
   <link rel="preconnect" href="https://fonts.gstatic.com/%22%3E">
   <link href="https://fonts.googleapis.com/css2?family=Train+One&display=swap" rel="stylesheet">
-
+  <link rel="stylesheet" href="notification.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Train+One&display=swap%27');
   </style>
@@ -310,7 +310,38 @@ window.onscroll = function () {
     }
 };
 </script>
+<script>
+  (function makeDiv(){
+  var divsize = 15*15;
+  msgs = ['hello', 'lorem ipsum', 'some message']
+  colors = ['orange', 'yellow', 'green', 'cyan', 'pink']
+  const color = colors[Math.floor(Math.random() * colors.length)]; 
+  const msg = msgs[Math.floor(Math.random() * msgs.length)];
+  $newdiv = $('<div/>').css({
+      'width':divsize+'px',
+      'height':divsize+'px',
+      'background-color': color,
+     
+  }).append('<div><img src="pin.png"></div><br><hr class="noti"><br>').append(msg).addClass('notification');
+  x= [5, 1250]
+  y= [5,30, 500]
+  const xp = x[Math.floor(Math.random() * x.length)];
+  const yp = y[Math.floor(Math.random() * y.length)];
+  var posx = xp;
+  var posy = yp;
+  
+  $newdiv.css({
+      'position':'absolute',
+      'left':posx+'px',
+      'top':posy+'px',
+      'text-align' : 'center'
+  }).appendTo( 'body' ).fadeIn(100).delay(5000).fadeOut(200, function(){
+     $(this).remove();
+     makeDiv(); 
+  }); 
+})();
 
+</script>
 
 
 </html>

@@ -5,27 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="notification.css">
+    <style>
+        img{
+            height: 5vh;
+        }
+    </style>
 </head>
 <body>
     <script src="../../static/jquery-3.5.1.js"></script>
 <script>
     (function makeDiv(){
-    var divsize = 10*10;
-    var color = '#'+ Math.round(0xffffff * Math.random()).toString(16);
+    var divsize = 15*15;
     msgs = ['hello', 'lorem ipsum', 'some message']
+    colors = ['orange', 'yellow', 'green', 'cyan', 'pink']
+    const color = colors[Math.floor(Math.random() * colors.length)]; 
     const msg = msgs[Math.floor(Math.random() * msgs.length)];
     $newdiv = $('<div/>').css({
         'width':divsize+'px',
         'height':divsize+'px',
         'background-color': color,
-        'display' : 'flex',
-        'flex-direction' : 'column',
-        'justify-content' : 'center',
-        'align-items' : 'center',
-        'text-align' : 'center',
-        'font-weight' : 'bolder'
-    }).append(msg);
-    x= [5, 1400]
+       
+    }).append('<div><img src="pin.png"></div><hr><br>').append(msg).addClass('notification');
+    x= [5, 1250]
     y= [5,30, 500]
     const xp = x[Math.floor(Math.random() * x.length)];
     const yp = y[Math.floor(Math.random() * y.length)];
@@ -36,12 +38,8 @@
         'position':'absolute',
         'left':posx+'px',
         'top':posy+'px',
-        'display' : 'flex',
-        'flex-direction' : 'column',
-        'justify-content' : 'center',
-        'align-items' : 'center',
-        'text-align' : 'center',
-    }).appendTo( 'body' ).fadeIn(100).delay(3000).fadeOut(200, function(){
+        'text-align' : 'center'
+    }).appendTo( 'body' ).fadeIn(100).delay(5000).fadeOut(200, function(){
        $(this).remove();
        makeDiv(); 
     }); 
