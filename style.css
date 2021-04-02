@@ -41,8 +41,8 @@ nav{
 }
 
 .logo{
-    height: 20%;
-    width: 20%;
+    height: 14%;
+    width: 14%;
 }
 .event{
     display: flex;
@@ -111,14 +111,15 @@ hr + h2 {
 }
 
 .profile_card {
-    width: 24%;
+    width: 20%;
     height: fit-content;
     text-align: center;
     background-color: #182538;
     padding: 1em;
     display: block;
-    margin-right: 1em;
-    margin-left: 1em;
+    margin-right: auto;
+    margin-left: auto
+    ;
     margin: auto;
     border-radius: 100%;
 }
@@ -241,3 +242,57 @@ hr + h2 {
       text-align: justify;
       top: 45%;
   }
+
+.typing {
+    margin-bottom: 3em;
+}
+
+.typing>* {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typingAnim 5s steps(50);
+}
+
+.typing>*::after {
+    content: ". .";
+    display: block;
+    position: absolute;
+    top: 1em;
+    left: .35em;
+}
+
+.typing>*::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 2.1em;
+    left: .25em;
+    width: 1em;
+    height: .1em;
+    border-radius: 100%;
+    background: #fff;
+    animation: typingSpeak .5s steps(2);
+    animation-iteration-count: 5;
+}
+
+@keyframes typingAnim {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+@keyframes typingSpeak {
+    0% {
+        width: 1em;
+        height: .1em
+    }
+
+    100% {
+        width: 1em;
+        height: .5em;
+    }
+}
