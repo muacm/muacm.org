@@ -216,7 +216,16 @@ hr + h2 {
     width: 80%;
     opacity: 0;
     transition: .5s ease;
+    padding: 2em;
     background-color: #008CBA;
+  }
+
+  .text {
+    margin-top: 2em;
+  }
+
+  .textDesc {
+      margin-top: 2em;
   }
 
   .Eventcontainer:hover .overlay {
