@@ -120,7 +120,7 @@
   function setWidthHeight() {
     WIDTH = canvas.width = parseInt(window.getComputedStyle(document.querySelector('body')).width);
     HEIGHT = canvas.height = parseInt(window.getComputedStyle(document.querySelector('body')).height);
-    canvas.height = canvas.height - 3100;
+    canvas.height = canvas.height - 2900;
     //canvas.width = canvas.width - 100;
 
   }
