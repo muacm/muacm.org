@@ -118,10 +118,8 @@ hr + h2 {
     padding: 1em;
     display: block;
     margin-right: auto;
-    margin-left: auto
-    ;
+    margin-left: auto;
     margin: auto;
-    border-radius: 100%;
 }
 
 .fab {
@@ -147,7 +145,8 @@ hr + h2 {
 }
 
 .profile_image {
-    width: 100%;
+    width: 200px;
+    height: 200px;
 }
 
 .layer_hod {
