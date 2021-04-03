@@ -9,14 +9,19 @@ body{
 
 .header-i{
     background-image: url('static/background.jpg');
-    display: grid;
-    place-content: center;
-    place-items: center;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 60vh;
     width: 100vw;
     background-position: center;
     background-size: contain;
   }
+.main-heading{
+    display: none;
+}
 .nav-item{
     font-size: 32px;
     font-family:"sans-serif";
@@ -36,7 +41,7 @@ nav{
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 4px );
-    padding: 2em;
+    padding: 1em;
     
 }
 
@@ -53,8 +58,9 @@ nav{
 
 .event_container{
     display: grid;
-    grid-template-columns: 50% 50%;
-    grid-gap: 2rem;
+    grid-template-columns: 45% 45%;
+    place-items: center;
+    place-content: center;
 }
 .rounded-circle{
     height: 30vh;
@@ -197,7 +203,6 @@ hr + h2 {
 
 .Eventcontainer {
     position: relative;
-    width: 100%;
 }
 
   .image {
@@ -212,8 +217,6 @@ hr + h2 {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 100%;
-    width: 80%;
     opacity: 0;
     transition: .5s ease;
     padding: 2em;
@@ -228,30 +231,20 @@ hr + h2 {
   .textDesc {
       margin-top: 2em;
   }
-
+   .first{
+    height: 30vh;
+  }
   .Eventcontainer:hover .overlay {
     opacity: 1;
-  }
-
-  .text {
-    color: white;
-    font-size: 20px;
-    position:absolute;
-    top: 12%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
   }
-
-  .textDesc{
-      color: white;
-      font-size: 15px;
-      position: relative;
-      text-align: justify;
-      top: 45%;
-  }
+.text{
+    font-weight: bolder;
+}
 
 .typing {
     margin-bottom: 3em;
@@ -305,6 +298,146 @@ hr + h2 {
         width: 1em;
         height: .5em;
     }
+}
+@media(max-width:600px){
+    .header-i{
+        height: 80vh !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    canvas{
+        height: 50vh;
+        width: 100vw;
+    }
+    .typing h3{
+        font-size: 10px !important;
+    }
+    .notification{
+        height: 10vh !important;
+        width: 30vw !important;
+        font-size: 5px !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .notification hr{
+        display: none;
+    }
+    .event_container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .typing{
+        width: 80vw;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .social-handles{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-gap: 1em;
+    }
+    .main-heading{
+        display: block;
+        color: #00bfff;
+    }
+    canvas{
+        display: none !important;
+    }
+    .nav-item{
+        font-size: small;
+    }
+}
+
+/*Css for teams page*/
+
+.teamsContainer {
+    margin: auto;               /*to be reviewed later **/
+    text-align: center;
+}
+
+.profile_card {
+    width: 20%;
+    height: fit-content;
+    text-align: center;
+    background-color: #182538;
+    padding: 1em;
+    display: block;
+    margin-right: auto;
+    margin-left: auto
+    ;
+    margin: auto;
+    border-radius: 100%;
+}
+
+.fab {
+    color: white;
+    font-size: 18px;
+    margin-right: 4px;
+    margin-left: 4px;
+}
+
+.fab:hover {
+    color: gray;
+}
+
+.heading {
+    color: white;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.profile_name, .profile_desc {
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.profile_image {
+    width: 100%;
+}
+
+.layer_hod {
+    margin-top: 3em;
+    margin-bottom: 2em;
+}
+
+.layer_council {
+    margin-top: 3em;
+    margin-bottom: 2em;
+    display: flex;
+}
+
+.layer_core {
+    margin-top: 3em;
+    margin-bottom: 3em;
+    display: flex;
+}
+
+.layer_executive_01, .layer_executive_02 {
+    margin-top: 3em;
+    margin-bottom: 3em;
+    display: flex;
+}
+
+.team_section_title {
+    color: white;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#teams-page {
+    margin-top: 6em;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1400px;
 }
 
 .see_more {

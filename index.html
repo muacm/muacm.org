@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="static/css/footer.css">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="preconnect" href="https://fonts.gstatic.com/%22%3E">
   <link href="https://fonts.googleapis.com/css2?family=Train+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="notification.css">
@@ -20,7 +20,7 @@
 <body>
     <!--NavBar-->
     <nav class="navbar navbar-expand-lg navbar-dark text-secondary fixed-top"
-      style="background: transparent; height: 15vh; color: white;" id="nav">
+      style="background: transparent; height: 8vh; color: white;" id="nav">
       <div class="container">
 
         <a class="navbar-brand" href="index.html"><img src='static/MuACMlogo.png' class="logo"></a>
@@ -52,14 +52,12 @@
     </nav>
 
 
-  <div class="header-i" id="canvasdiv" style="margin: 2px; height: 80vh; width: 100%;">
-    <canvas id="mycanvas" width="10" height="10">
-    </canvas>
+  <div class="header-i" id="canvasdiv" style="margin: 2px; height: 80vh; width: 100%;"><br><br>
+    <canvas id="mycanvas" width="10" height="10"></canvas>
+    <h1 class="main-heading">MUACM</h1>
     <div class="typing">
-      <h1>To the World ahead needs research and we aim for the same.</h1>
+      <h3>To the World ahead needs research and we aim for the same.</h3>
     </div>
-
-
   </div>
 
   <!--<div class="header-i">
@@ -73,7 +71,7 @@
     </div>
   </div>
 
-  <br><br>
+  <br><br><br><br>
 
   <!--About US-->
   <div class="about_us container" id="aboutusID">
@@ -159,18 +157,18 @@
     <div class="event_container">
         <div class="event Eventcontainer">
           <img class="rounded-circle" src="static/demo_character.jpg" alt="Card image cap">
-          <div class="overlay">
-            <div class="text">Core Member Recruitment Session</div>
-            <div class="textDesc">The following event was being held to recruit
+          <div class="overlay rounded-circle">
+            <div class="text">Core Member <br> Recruitment Session</div>
+            <div class="textDesc container">The following event was being held to recruit
             Core team members in the MUACM family and move our way to the
             chartering of the chapter.</div>
           </div>
         </div>
         <div class="event Eventcontainer">
           <img class="rounded-circle" src="static/demo_character.jpg" alt="Card image cap">
-            <div class="overlay">
-              <div class="text">Induction Program</div>
-              <div class="textDesc">The following event was being held aftering
+            <div class="overlay rounded-circle">
+              <div class="text container">Induction Program</div>
+              <div class="textDesc container">The following event was being held aftering
               our chapter chartering. Chandrashekhar sir was the speaker who
               promoted the value of ACM-India.</div>
             </div>
@@ -188,13 +186,13 @@
       <div class="carousel-inner">
         <center>
         <div class="carousel-item active">
-          <img class="d-block" style="width: 50vw" src="static/images/slide.jfif" alt="First slide">
+          <img class="d-block first" style="width: 50vw" src="static/images/slide.jfif" alt="First slide">
         </div>
         <div class="carousel-item">
-          <img class="d-block" style="width: 50vw" src="static/images/slide.jfif" alt="Second slide">
+          <img class="d-block first" style="width: 50vw" src="static/images/slide.jfif" alt="Second slide">
         </div>
         <div class="carousel-item">
-          <img class="d-block" style="width: 50vw" src="static/images/slide.jfif" alt="Third slide">
+          <img class="d-block first" style="width: 50vw" src="static/images/slide.jfif" alt="Third slide">
         </div></center>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -242,11 +240,11 @@
       <div class="box2">
         <h3>Social Media Handles</h3>
         <ul>
-          <a href="#">
-            <li>Instagram</li>
+          <a href="https://www.instagram.com/mu_acm/">
+            <li><i class="fa fa-instagram"></i></li>
           </a>
-          <a href="#">
-            <li>Linkedin</li>
+          <a href="https://www.linkedin.com/company/acm-student-chapter-medicaps/?trk=public_pos">
+            <li><i class="fa fa-linkedin"></i></li>
           </a>
        
         </ul>
@@ -311,12 +309,22 @@ window.onscroll = function () {
       'background-color': color,
      
   }).append('<div><img src="pin.png"></div><br><hr class="noti"><br>').append(msg).addClass('notification');
-  x= [230, 1050]
-  y= [150]
-  const xp = x[Math.floor(Math.random() * x.length)];
-  const yp = y[Math.floor(Math.random() * y.length)];
-  var posx = xp;
-  var posy = yp;
+  if(screen.width>500){
+    x= [230, 1050]
+    y= [150]
+    const xp = x[Math.floor(Math.random() * x.length)];
+    const yp = y[Math.floor(Math.random() * y.length)];
+    var posx = xp;
+    var posy = yp;
+  }
+  else{
+    x= [230, 50]
+    y= [350]
+    const xp = x[Math.floor(Math.random() * x.length)];
+    const yp = y[Math.floor(Math.random() * y.length)];
+    var posx = xp;
+    var posy = yp;
+  }
   
   $newdiv.css({
       'position':'absolute',
