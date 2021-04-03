@@ -9,10 +9,12 @@ body{
 
 .header-i{
     background-image: url('static/background.jpg');
-    display: grid;
-    place-content: center;
-    place-items: center;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 60vh;
     width: 100vw;
     background-position: center;
     background-size: contain;
@@ -36,7 +38,7 @@ nav{
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 4px );
-    padding: 2em;
+    padding: 1em;
     
 }
 
@@ -53,8 +55,9 @@ nav{
 
 .event_container{
     display: grid;
-    grid-template-columns: 50% 50%;
-    grid-gap: 2rem;
+    grid-template-columns: 45% 45%;
+    place-items: center;
+    place-content: center;
 }
 .rounded-circle{
     height: 30vh;
@@ -197,7 +200,6 @@ hr + h2 {
 
 .Eventcontainer {
     position: relative;
-    width: 100%;
 }
 
   .image {
@@ -212,36 +214,24 @@ hr + h2 {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 100%;
-    width: 80%;
     opacity: 0;
     transition: .5s ease;
     background-color: #008CBA;
   }
-
+   .first{
+    height: 30vh;
+  }
   .Eventcontainer:hover .overlay {
     opacity: 1;
-  }
-
-  .text {
-    color: white;
-    font-size: 20px;
-    position:absolute;
-    top: 12%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
   }
-
-  .textDesc{
-      color: white;
-      font-size: 15px;
-      position: relative;
-      text-align: justify;
-      top: 45%;
-  }
+.text{
+    font-weight: bolder;
+}
 
 .typing {
     margin-bottom: 3em;
@@ -294,5 +284,51 @@ hr + h2 {
     100% {
         width: 1em;
         height: .5em;
+    }
+}
+@media(max-width:600px){
+    .header-i{
+        height: 80vh !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    canvas{
+        height: 50vh;
+        width: 100vw;
+    }
+    .typing h3{
+        font-size: 10px !important;
+    }
+    .notification{
+        height: 10vh !important;
+        width: 30vw !important;
+        font-size: 5px !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .notification hr{
+        display: none;
+    }
+    .event_container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .typing{
+        width: 80vw;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .social-handles{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-gap: 1em;
     }
 }
