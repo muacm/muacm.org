@@ -19,6 +19,9 @@ body{
     background-position: center;
     background-size: contain;
   }
+.main-heading{
+    display: none;
+}
 .nav-item{
     font-size: 32px;
     font-family:"sans-serif";
@@ -331,4 +334,98 @@ hr + h2 {
         grid-template-columns: 100%;
         grid-gap: 1em;
     }
+    .main-heading{
+        display: block;
+        color: #00bfff;
+    }
+    canvas{
+        display: none !important;
+    }
+    .nav-item{
+        font-size: small;
+    }
+}
+
+/*Css for teams page*/
+
+.teamsContainer {
+    margin: auto;               /*to be reviewed later **/
+    text-align: center;
+}
+
+.profile_card {
+    width: 20%;
+    height: fit-content;
+    text-align: center;
+    background-color: #182538;
+    padding: 1em;
+    display: block;
+    margin-right: auto;
+    margin-left: auto
+    ;
+    margin: auto;
+    border-radius: 100%;
+}
+
+.fab {
+    color: white;
+    font-size: 18px;
+    margin-right: 4px;
+    margin-left: 4px;
+}
+
+.fab:hover {
+    color: gray;
+}
+
+.heading {
+    color: white;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.profile_name, .profile_desc {
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.profile_image {
+    width: 100%;
+}
+
+.layer_hod {
+    margin-top: 3em;
+    margin-bottom: 2em;
+}
+
+.layer_council {
+    margin-top: 3em;
+    margin-bottom: 2em;
+    display: flex;
+}
+
+.layer_core {
+    margin-top: 3em;
+    margin-bottom: 3em;
+    display: flex;
+}
+
+.layer_executive_01, .layer_executive_02 {
+    margin-top: 3em;
+    margin-bottom: 3em;
+    display: flex;
+}
+
+.team_section_title {
+    color: white;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#teams-page {
+    margin-top: 6em;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1400px;
 }
