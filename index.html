@@ -299,8 +299,8 @@ window.onscroll = function () {
 <script>
   setTimeout((function makeDiv(){
   var divsize = 15*15;
-  msgs = ['Quantum Computing is the new revolution', 'ACM has almost 114 countries associated with it', 'Core team of STIC only has 13 members in it']
-  colors = ['orange', 'yellow', 'green', 'cyan', 'pink']
+  msgs = ['Quantum Computing is the new revolution', 'ACM has almost 114 countries associated with it', 'Core team of STIC only has 13 members in it', 'ACM and IEEE are the most prestigious publications.']
+  colors = ['#c94fe8', '#482bd9', '#7a0fd1', 'cyan', 'pink']
   const color = colors[Math.floor(Math.random() * colors.length)]; 
   const msg = msgs[Math.floor(Math.random() * msgs.length)];
   $newdiv = $('<div/>').css({
@@ -310,8 +310,8 @@ window.onscroll = function () {
      
   }).append('<div><img src="pin.png"></div><br><hr class="noti"><br>').append(msg).addClass('notification');
   if(screen.width>500){
-    x= [230, 1050]
-    y= [150]
+    x= [30]
+    y= [100]
     const xp = x[Math.floor(Math.random() * x.length)];
     const yp = y[Math.floor(Math.random() * y.length)];
     var posx = xp;
