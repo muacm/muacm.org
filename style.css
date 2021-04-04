@@ -8,7 +8,7 @@ body{
 }
 
 .header-i{
-    background-image: url('static/background.jpg');
+    background-image: url('static/background_1.png');
     display: flex;
     flex-direction: column;
     justify-content: center;
