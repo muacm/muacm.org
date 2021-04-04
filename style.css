@@ -224,7 +224,6 @@ hr + h2 {
     transition: .5s ease;
     padding: 2em;
     background-color: #008CBA;
-    border-radius: 100%;
   }
 
   .text {
@@ -241,8 +240,8 @@ hr + h2 {
     opacity: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center; */
+    /* align-items: center; */
     text-align: center;
   }
 .text{
@@ -447,4 +446,12 @@ hr + h2 {
     font-size: 28px;
     text-align: center;
     margin-top: 4em;
+    float: right;
+    display: block;
+    top: 100%;
+    margin-right: 2em;
+}
+
+.gallery_image {
+    height: 200px;
 }
